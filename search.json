@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project description",
+    "section": "",
+    "text": "Nucleotides can be described by 7 torsional angles and 2 pseudo-torsional angles"
+  },
+  {
+    "objectID": "index.html#rna-torsional-angles-1",
+    "href": "index.html#rna-torsional-angles-1",
+    "title": "Project description",
+    "section": "RNA torsional angles",
+    "text": "RNA torsional angles\n\n\n\n\n\n\nNote\n\n\n\n\nPredicting torsional and/or pseudo-torsional angles could help to resolve 3D conformational folding\nFor each nucleotide, we could angles instead of positions"
+  },
+  {
+    "objectID": "index.html#spot-rna-1d",
+    "href": "index.html#spot-rna-1d",
+    "title": "Project description",
+    "section": "SPOT-RNA-1D",
+    "text": "SPOT-RNA-1D\n\n\n\nNetwork architecture of SPOT-RNA-1D (Singh et al. (2021))\n\n\n\nPredict torsional and pseudo-torsional angles from the sequence\n\n\n\n\n\n\n\nLimits\n\n\n\n\nResults fall short of expectations\nNeural network architecture could be improved for sequential data\nIs the regression the best method ?"
+  },
+  {
+    "objectID": "index.html#rna-torsional-angles-2",
+    "href": "index.html#rna-torsional-angles-2",
+    "title": "Project description",
+    "section": "RNA torsional angles",
+    "text": "RNA torsional angles\n\n\n\nTorsional angles distribution on test sets of SPOT-RNA-1D\n\n\n\n\n\n\n\n\nGoal\n\n\n\n\nGiven groups of 2/3, the aim of the project is to predict one torsional/pseudo-torsional angle per nucleotide\nThe question to be answered: Is classification better than regression for this task ?\nInstead of doing regression, the aim would be to try a deep learning architecture for:\n\nBinary classification\nMulticlass\n\nThe deep learning architecture doesn’t have to be complex (an RNN is sufficient)\n\n\n\n\nDataset\nThe datasets are available in the skeleton code available at this link.\n\nTraining set: dataset from rsRNASP (Tan et al. (2022)) (192 non-redundant RNAs)\nTest set: RNA Puzzles (Cruz et al. (2012)) (40 RNAs)\n\nYou should only consider chain A when this is a multi-stranded RNA.\n\n\nMetrics\nThe metric to compare the performances is the (Mean Absolute Error).\n\nMean absolute Error (MAE)\n\n\n\\[\nMAE = \\min(d_i, 360-d_i)\n\\]\nwith: \\[\nd_i = | angle_i^{pred} - angle_i^{true} |\n\\]"
+  },
+  {
+    "objectID": "pages/contact.html",
+    "href": "pages/contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "If you have any question, you can send a mail at this address: clement.bernard@univ-evry.fr."
+  },
+  {
+    "objectID": "pages/guideline.html",
+    "href": "pages/guideline.html",
+    "title": "Project guideline",
+    "section": "",
+    "text": "Deliverable\n\n\n\n\nSource code (in Github, Gitlab)\nPresentation of 10 min"
+  },
+  {
+    "objectID": "pages/guideline.html#group",
+    "href": "pages/guideline.html#group",
+    "title": "Project guideline",
+    "section": "Group",
+    "text": "Group\nPlease create your group and complete the following document."
+  }
+]
