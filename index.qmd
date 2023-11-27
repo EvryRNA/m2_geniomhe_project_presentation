@@ -1,0 +1,78 @@
+---
+title: "Project description"
+bibliography: references.bib
+---
+
+## RNA torsional angles
+
+Nucleotides can be described by **7 torsional angles** and **2 pseudo-torsional angles**
+
+![](img/all_angles.drawio.png){fig-align="center" width=60%}
+
+
+## RNA torsional angles
+
+:::{.callout-note}
+- Predicting torsional and/or pseudo-torsional angles could help to resolve 3D conformational folding
+- For each nucleotide, we could angles instead of positions
+:::
+
+## SPOT-RNA-1D
+
+![Network architecture of SPOT-RNA-1D (@spotrna1d)](img/spot-rna.png)
+
+- Predict torsional and pseudo-torsional angles from the sequence
+
+
+:::{.callout-warning}
+### Limits
+- Results fall short of expectations
+- Neural network architecture could be improved for sequential data
+- Is the regression the best method ? 
+:::
+
+## RNA torsional angles
+
+![Torsional angles distribution on test sets of SPOT-RNA-1D](img/torsional_distribution.png){fig-align="center" width=60%}
+
+:::{.callout-tip}
+### Goal
+- Given groups of 2/3, the aim of the project is to predict *one* torsional/pseudo-torsional angle per nucleotide
+- The question to be answered: **Is classification better than regression for this task ?**
+- Instead of doing regression, the aim would be to try a deep learning architecture for:
+    - Binary classification
+    - Multiclass
+- The deep learning architecture doesn't have to be complex (an RNN is sufficient)
+:::
+
+### Dataset
+
+The datasets are available in the skeleton code available at this [link](https://github.com/EvryRNA/m2_geniomhe_rna_project/tree/main). 
+
+- **Training set**: dataset from rsRNASP (@rsrnasp) (192 non-redundant RNAs)
+- **Test set**: RNA Puzzles (@rna_puzzles) (40 RNAs)
+
+You should only consider chain A when this is a multi-stranded RNA.
+
+### Metrics 
+The metric to compare the performances is the (Mean Absolute Error). 
+
+- **Mean absolute Error (MAE)** 
+
+. . . 
+
+$$
+MAE = \min(d_i, 360-d_i)
+$$
+
+with:
+$$
+d_i = | angle_i^{pred} - angle_i^{true} | 
+$$
+
+
+
+<!-- ::: {.callout-warning}
+For this tutorial, we are not going to install miniconda. Instead, we will use Google Colaboratory where all the installations are already done.
+[Google Colab](https://colab.research.google.com/?hl=fr)
+::: -->
