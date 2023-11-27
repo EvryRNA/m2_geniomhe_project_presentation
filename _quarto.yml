@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "M2-GENIOMHE PROJECT"
+  page-navigation: false
+  navbar:
+    background: "#265073"
+    search: false
+    left:
+      - text: "Description"
+        file: "index.qmd"
+      - text: "Guidelines"
+        file: "pages/guideline.qmd"
+      - text: "Contact"
+        file: "pages/contact.qmd"
+  # sidebar:
+  #   style: "docked"
+  #   search: false
+  #   contents:
+  #     - section: "Project"
+  #       contents:
+  #         - index.qmd
+  page-footer: "Copyright 2023, Clément Bernard" 
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    page-layout: full

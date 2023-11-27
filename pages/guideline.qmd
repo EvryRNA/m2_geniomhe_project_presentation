@@ -1,0 +1,69 @@
+---
+title: "Project guideline"
+---
+
+### Task
+
+:::{.callout-note}
+### Deliverable
+- Source code (in Github, Gitlab)
+- Presentation of 10 min
+:::
+
+
+### Source code
+
+The source code should have the following requirements:
+
+- Have a `README` to explain how is structured the codes, the installation requirements.
+- Have a class that can predict the angles from a `.fasta` file (use the following skeleton) 
+
+You can (recommended) start your code from the following [link](https://github.com/EvryRNA/m2_geniomhe_rna_project/tree/main). It provides the basic skeleton for your project, such as the training and testing data. 
+
+Your code should include a file with this interface: 
+```{python}
+
+class AngleHelper:
+  def __init__(self, *args, **kwargs):
+    # TO BE COMPLETE
+    pass
+
+
+  def predict(self, in_path, out_path):
+    """
+    Function that should predict the angles for the sequence of nucleotides
+    Args:
+      - in_path: path to a `fasta` file. 
+        Example: 
+          "
+          >17EP
+          ACGUUCU
+          "
+      - out_path: path to a `.json` file where will be stored the prediciton. 
+        It should have the following keys: (example with `alpha` angle)
+          {
+            "17EP": {
+              "sequence": "ACGUUCU",
+              "angles": {"alpha": [0, 0, 0, 0, 0, 0, 0]}
+            } 
+
+          }
+    """
+    return None
+```
+
+### Presentation
+
+The 10 min presentation should: 
+
+:::{.callout-caution}
+### Deliverable
+- Present briefly the project 
+- Present the work done with the results 
+- Present the limits of the method and the project
+- Detail the group contribution 
+:::
+
+## Group
+
+Please create your group and complete the following [document](https://docs.google.com/spreadsheets/d/1XEne6tfJT_OS5oCT8iaOHTTYfovKcJ3uM6sCt4izyO8/edit?usp=sharing). 
