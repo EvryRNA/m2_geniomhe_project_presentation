@@ -28,6 +28,13 @@
     "text": "RNA torsional angles\n\n\n\nTorsional angles distribution on test sets of SPOT-RNA-1D\n\n\n\n\n\n\n\n\nGoal\n\n\n\n\nGiven groups of 2/3, the aim of the project is to predict one torsional/pseudo-torsional angle per nucleotide\nThe question to be answered: Is classification better than regression for this task ?\nInstead of doing regression, the aim would be to try a deep learning architecture for:\n\nBinary classification\nMulticlass\n\nThe deep learning architecture doesn’t have to be complex (an RNN is sufficient)\n\n\n\n\nDataset\nThe datasets are available in the skeleton code available at this link.\n\nTraining set: dataset from rsRNASP (Tan et al. (2022)) (192 non-redundant RNAs)\nTest set: RNA Puzzles (Cruz et al. (2012)) (40 RNAs)\n\nYou should only consider chain A when this is a multi-stranded RNA.\n\n\nMetrics\nThe metric to compare the performances is the (Mean Absolute Error).\n\nMean absolute Error (MAE)\n\n\n\\[\nMAE = \\min(d_i, 360-d_i)\n\\]\nwith: \\[\nd_i = | angle_i^{pred} - angle_i^{true} |\n\\]"
   },
   {
+    "objectID": "index.html#implementation",
+    "href": "index.html#implementation",
+    "title": "Project description",
+    "section": "Implementation",
+    "text": "Implementation\nA brief description of the workflow of the project is described in the following figure."
+  },
+  {
     "objectID": "pages/contact.html",
     "href": "pages/contact.html",
     "title": "Contact",
@@ -39,7 +46,7 @@
     "href": "pages/guideline.html",
     "title": "Project guideline",
     "section": "",
-    "text": "Deliverable\n\n\n\n\nSource code (in Github, Gitlab)\nPresentation of 10 min"
+    "text": "Deliverable\n\n\n\n\nSource code (in Github, Gitlab) (Wednesday, January, 10th. 23h59)\nPresentation of 10 min (Friday, January, 12th)\n\n\n\n\n\n\n\n\n\nMore details\n\n\n\n\nYou should send a mail before Wednesday, January, 10th at clement.bernard@univ-evry.fr with object \"M2-GENIOMHE Project - GROUP X\" (with X your group number)\nYou have to send the presentation the day before the oral (Thursday, January, 11th)"
   },
   {
     "objectID": "pages/guideline.html#group",
@@ -47,5 +54,19 @@
     "title": "Project guideline",
     "section": "Group",
     "text": "Group\nPlease create your group and complete the following document."
+  },
+  {
+    "objectID": "pages/guideline.html#source-code",
+    "href": "pages/guideline.html#source-code",
+    "title": "Project guideline",
+    "section": "Source code",
+    "text": "Source code\nThe source code should have the following requirements:\n\nHave a README to explain how is structured the codes, the installation requirements.\nHave a class that can predict the angles from a .fasta file (use the following skeleton)\n\nYou can (recommended) start your code from the following link. It provides the basic skeleton for your project, such as the training and testing data.\nYour code should include a file with this interface:\n\nclass AngleHelper:\n  def __init__(self, *args, **kwargs):\n    # TO BE COMPLETE\n    pass\n\n\n  def predict(self, in_path, out_path):\n    \"\"\"\n    Function that should predict the angles for the sequence of nucleotides\n    Args:\n      - in_path: path to a `fasta` file. \n        Example: \n          \"\n          >17EP\n          ACGUUCU\n          \"\n      - out_path: path to a `.json` file where will be stored the prediciton. \n        It should have the following keys: (example with `alpha` angle)\n          {\n            \"17EP\": {\n              \"sequence\": \"ACGUUCU\",\n              \"angles\": {\"alpha\": [0, 0, 0, 0, 0, 0, 0]}\n            } \n\n          }\n    \"\"\"\n    return None"
+  },
+  {
+    "objectID": "pages/guideline.html#presentation",
+    "href": "pages/guideline.html#presentation",
+    "title": "Project guideline",
+    "section": "Presentation",
+    "text": "Presentation\nThe 10 min presentation should:\n\n\n\n\n\n\nDeliverable\n\n\n\n\nPresent briefly the project\nPresent the work done with the results\nPresent the limits of the method and the project\nDetail the group contribution"
   }
 ]
