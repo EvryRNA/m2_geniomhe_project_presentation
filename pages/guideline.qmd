@@ -2,23 +2,33 @@
 title: "Project guideline"
 ---
 
-### Task
+## Task
 
 :::{.callout-note}
 ### Deliverable
-- Source code (in Github, Gitlab)
-- Presentation of 10 min
+- Source code (in Github, Gitlab) (**Wednesday, January, 10th. 23h59**)
+- Presentation of 10 min (**Friday, January, 12th**)
 :::
 
+:::{.callout-important}
+### More details
+- You should send a mail before **Wednesday, January, 10th** at `clement.bernard@univ-evry.fr` with object `"M2-GENIOMHE Project - GROUP X"` (with X your group number)
+- You have to send the presentation the day before the oral (**Thursday, January, 11th**) 
+:::
 
-### Source code
+## Group
+
+Please create your group and complete the following [document](https://docs.google.com/spreadsheets/d/1XEne6tfJT_OS5oCT8iaOHTTYfovKcJ3uM6sCt4izyO8/edit?usp=sharing). 
+
+## Source code
 
 The source code should have the following requirements:
 
 - Have a `README` to explain how is structured the codes, the installation requirements.
 - Have a class that can predict the angles from a `.fasta` file (use the following skeleton) 
 
-You can (recommended) start your code from the following [link](https://github.com/EvryRNA/m2_geniomhe_rna_project/tree/main). It provides the basic skeleton for your project, such as the training and testing data. 
+You can (recommended) start your code from the following [link](https://github.com/EvryRNA/m2_geniomhe_rna_project/tree/main). 
+It provides the basic skeleton for your project, such as the training and testing data. 
 
 Your code should include a file with this interface: 
 ```{python}
@@ -52,7 +62,7 @@ class AngleHelper:
     return None
 ```
 
-### Presentation
+## Presentation
 
 The 10 min presentation should: 
 
@@ -63,7 +73,3 @@ The 10 min presentation should:
 - Present the limits of the method and the project
 - Detail the group contribution 
 :::
-
-## Group
-
-Please create your group and complete the following [document](https://docs.google.com/spreadsheets/d/1XEne6tfJT_OS5oCT8iaOHTTYfovKcJ3uM6sCt4izyO8/edit?usp=sharing). 

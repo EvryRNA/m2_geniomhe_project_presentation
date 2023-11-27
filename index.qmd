@@ -43,6 +43,7 @@ Nucleotides can be described by **7 torsional angles** and **2 pseudo-torsional 
     - Binary classification
     - Multiclass
 - The deep learning architecture doesn't have to be complex (an RNN is sufficient)
+- You should compare the results of the classification to SPOT-RNA-1D results
 :::
 
 ### Dataset
@@ -50,7 +51,7 @@ Nucleotides can be described by **7 torsional angles** and **2 pseudo-torsional 
 The datasets are available in the skeleton code available at this [link](https://github.com/EvryRNA/m2_geniomhe_rna_project/tree/main). 
 
 - **Training set**: dataset from rsRNASP (@rsrnasp) (192 non-redundant RNAs)
-- **Test set**: RNA Puzzles (@rna_puzzles) (40 RNAs)
+- **Test set**: RNA Puzzles (@rna_puzzles) (29 RNAs)
 
 You should only consider chain A when this is a multi-stranded RNA.
 
@@ -70,7 +71,11 @@ $$
 d_i = | angle_i^{pred} - angle_i^{true} | 
 $$
 
+## Implementation 
 
+A brief description of the workflow of the project is described in the following figure.
+
+![](img/project_workflow_m2.drawio.png)
 
 <!-- ::: {.callout-warning}
 For this tutorial, we are not going to install miniconda. Instead, we will use Google Colaboratory where all the installations are already done.
