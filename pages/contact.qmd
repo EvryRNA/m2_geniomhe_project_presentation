@@ -18,6 +18,6 @@ If you're using something else than Pytorch, you can still look at the input and
 
 ## Resources 
 
-- ![Pytorch tutorial](https://www.learnpytorch.io/02_pytorch_classification/)
-- ![Bar chart using Matplotlib](https://pythonspot.com/matplotlib-bar-chart/)
-- ![Histogram using Matplotlib](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html)
+- [Pytorch tutorial](https://www.learnpytorch.io/02_pytorch_classification/)
+- [Bar chart using Matplotlib](https://pythonspot.com/matplotlib-bar-chart/)
+- [Histogram using Matplotlib](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html)
