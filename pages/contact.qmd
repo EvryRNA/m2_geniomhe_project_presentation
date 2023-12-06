@@ -2,7 +2,22 @@
 title: "Contact"
 ---
 
+
+
+
 ## Questions
 
 If you have any question, you can send a mail at this address: `clement.bernard@univ-evry.fr`. 
 
+
+## Help - Tutorial Pytorch
+
+If you're using Pytorch, you can have a look at this [Notebook](https://colab.research.google.com/drive/1LmxkKsUhDXUnl3XW2-JEsZocPx2arepL?usp=sharing) that shows an example of training for sequential data. 
+
+If you're using something else than Pytorch, you can still look at the input and output shapes to help you in the development process. 
+
+## Resources 
+
+- ![Pytorch tutorial](https://www.learnpytorch.io/02_pytorch_classification/)
+- ![Bar chart using Matplotlib](https://pythonspot.com/matplotlib-bar-chart/)
+- ![Histogram using Matplotlib](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html)

@@ -42,6 +42,20 @@
     "text": "If you have any question, you can send a mail at this address: clement.bernard@univ-evry.fr."
   },
   {
+    "objectID": "pages/contact.html#help---tutorial-pytorch",
+    "href": "pages/contact.html#help---tutorial-pytorch",
+    "title": "Contact",
+    "section": "Help - Tutorial Pytorch",
+    "text": "Help - Tutorial Pytorch\nIf you’re using Pytorch, you can have a look at this Notebook that shows an example of training for sequential data.\nIf you’re using something else than Pytorch, you can still look at the input and output shapes to help you in the development process."
+  },
+  {
+    "objectID": "pages/contact.html#resources",
+    "href": "pages/contact.html#resources",
+    "title": "Contact",
+    "section": "Resources",
+    "text": "Resources\n\n\n\n\nPytorch tutorial\n\n\n\n\n\nBar chart using Matplotlib\n\n\n\n\n\nHistogram using Matplotlib"
+  },
+  {
     "objectID": "pages/guideline.html",
     "href": "pages/guideline.html",
     "title": "Project guideline",
