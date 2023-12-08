@@ -16,6 +16,10 @@ If you're using Pytorch, you can have a look at this [Notebook](https://colab.re
 
 If you're using something else than Pytorch, you can still look at the input and output shapes to help you in the development process. 
 
+## Help - coding good practices
+
+To have a look at how to organize the code (in terms of folders, importations, etc), you can see this [repository](https://github.com/clementbernardd/m2_project_good_practices/tree/main).
+
 ## Resources 
 
 - [Pytorch tutorial](https://www.learnpytorch.io/02_pytorch_classification/)
