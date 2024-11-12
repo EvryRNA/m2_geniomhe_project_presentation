@@ -7,6 +7,18 @@ bibliography: references.bib
 - Given groups of 2/3, the aim of the project is to predict compute coarse-grained RMSD and to compute its correlation with three metrics: `RMSD`, `MCQ` and `TM-Score`.
 - The question to be answered: **Which coarse-grained representation has the highest correlation to current metrics?**
 - You should discuss the correlation results with insights on specificities on the compared metrics. 
+- Link to complete with your names for the group: [link](https://docs.google.com/spreadsheets/d/1l6drO62cX62KW-_4MRwvXW-8GXejj0SMUUjQoDxZ-3g/edit?usp=sharing). 
+- Github link to dataset to download: [link](https://github.com/clementbernardd/custom_rmsd_m2_geniomhe). 
+- The notation would be equal part from your code and the presentation. 
+- Notation for the code would include:
+    - Quality of code (documentation, structure)
+    - Detailed README.md with explanation about your repository
+    - Is the function to compute the custom RMSD is working?
+    - Git workflow: did you use git during the development and not only at the end?
+- Notation for the 10 min presentation would include:
+    - General quality of the presenation
+    - Comprehension of the project and its limits
+    - Discussion about correlation scores
 :::
 
 ## Coarse-grained RMSD vs classic metrics
@@ -110,3 +122,12 @@ being the scaling factor to ensure the score of random RNA pairs is independent 
 
 
 We don't ask you to implement these metrics, the results are given in the project. You should just keep in mind the general ideas of the metrics: `RMSD` and `TM-Score` are distance-based, and `MCQ` is based on torsional angles (and don't consider spatial distances).
+
+## Correlation
+
+To compute the correlation between two sets of points (and so between your custom CG-RMSD and the metrics), you can use:
+
+- Spearman correlation 
+- Pearson correlation coefficient
+
+Note that you would need to discuss the differences between these correlation factors.

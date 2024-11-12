@@ -176,6 +176,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#metrics-1" id="toc-metrics-1" class="nav-link" data-scroll-target="#metrics-1">Metrics</a></li>
   </ul></li>
+  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation">Correlation</a></li>
   </ul>
 </nav>
     </div>
@@ -215,6 +216,22 @@ Goal
 <li>Given groups of 2/3, the aim of the project is to predict compute coarse-grained RMSD and to compute its correlation with three metrics: <code>RMSD</code>, <code>MCQ</code> and <code>TM-Score</code>.</li>
 <li>The question to be answered: <strong>Which coarse-grained representation has the highest correlation to current metrics?</strong></li>
 <li>You should discuss the correlation results with insights on specificities on the compared metrics.</li>
+<li>Link to complete with your names for the group: <a href="https://docs.google.com/spreadsheets/d/1l6drO62cX62KW-_4MRwvXW-8GXejj0SMUUjQoDxZ-3g/edit?usp=sharing">link</a>.</li>
+<li>Github link to dataset to download: <a href="https://github.com/clementbernardd/custom_rmsd_m2_geniomhe">link</a>.</li>
+<li>The notation would be equal part from your code and the presentation.</li>
+<li>Notation for the code would include:
+<ul>
+<li>Quality of code (documentation, structure)</li>
+<li>Detailed README.md with explanation about your repository</li>
+<li>Is the function to compute the custom RMSD is working?</li>
+<li>Git workflow: did you use git during the development and not only at the end?</li>
+</ul></li>
+<li>Notation for the 10 min presentation would include:
+<ul>
+<li>General quality of the presenation</li>
+<li>Comprehension of the project and its limits</li>
+<li>Discussion about correlation scores</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -304,10 +321,19 @@ d_0 = 0.6\sqrt{L-0.5} - 2.5
 \]</span></p>
 <p>being the scaling factor to ensure the score of random RNA pairs is independent of RNA length.</p>
 <p>We don’t ask you to implement these metrics, the results are given in the project. You should just keep in mind the general ideas of the metrics: <code>RMSD</code> and <code>TM-Score</code> are distance-based, and <code>MCQ</code> is based on torsional angles (and don’t consider spatial distances).</p>
-
-
-
 </section>
+</section>
+<section id="correlation" class="level2">
+<h2 class="anchored" data-anchor-id="correlation">Correlation</h2>
+<p>To compute the correlation between two sets of points (and so between your custom CG-RMSD and the metrics), you can use:</p>
+<ul>
+<li>Spearman correlation</li>
+<li>Pearson correlation coefficient</li>
+</ul>
+<p>Note that you would need to discuss the differences between these correlation factors.</p>
+
+
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">

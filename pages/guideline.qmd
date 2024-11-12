@@ -48,15 +48,3 @@ class CustomCGRMSD:
     # To complete
     return None
 ```
-
-## Presentation
-
-The 10 min presentation should: 
-
-:::{.callout-caution}
-### Deliverable
-- Present briefly the project 
-- Present the work done with the results 
-- Present the limits of the method and the project
-- Detail the group contribution 
-:::
