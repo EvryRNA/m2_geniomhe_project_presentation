@@ -15,14 +15,7 @@ website:
         file: "pages/guideline.qmd"
       - text: "Contact"
         file: "pages/contact.qmd"
-  # sidebar:
-  #   style: "docked"
-  #   search: false
-  #   contents:
-  #     - section: "Project"
-  #       contents:
-  #         - index.qmd
-  page-footer: "Copyright 2023, Clément Bernard" 
+  page-footer: "Copyright 2024, Clément Bernard" 
 format:
   html:
     theme: flatly

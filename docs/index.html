@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.5.45">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>M2-GENIOMHE PROJECT - Project description</title>
+<title>Project description – M2-GENIOMHE PROJECT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,14 +17,16 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +40,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -64,7 +65,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -73,12 +80,42 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -87,33 +124,35 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">M2-GENIOMHE PROJECT</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
- <span class="menu-text">Description</span></a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Description</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/guideline.html">
- <span class="menu-text">Guidelines</span></a>
+    <a class="nav-link" href="./pages/guideline.html"> 
+<span class="menu-text">Guidelines</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/contact.html">
- <span class="menu-text">Contact</span></a>
+    <a class="nav-link" href="./pages/contact.html"> 
+<span class="menu-text">Contact</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -126,15 +165,17 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rna-torsional-angles" id="toc-rna-torsional-angles" class="nav-link active" data-scroll-target="#rna-torsional-angles">RNA torsional angles</a></li>
-  <li><a href="#rna-torsional-angles-1" id="toc-rna-torsional-angles-1" class="nav-link" data-scroll-target="#rna-torsional-angles-1">RNA torsional angles</a></li>
-  <li><a href="#spot-rna-1d" id="toc-spot-rna-1d" class="nav-link" data-scroll-target="#spot-rna-1d">SPOT-RNA-1D</a></li>
-  <li><a href="#rna-torsional-angles-2" id="toc-rna-torsional-angles-2" class="nav-link" data-scroll-target="#rna-torsional-angles-2">RNA torsional angles</a>
-  <ul class="collapse">
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#coarse-grained-rmsd-vs-classic-metrics" id="toc-coarse-grained-rmsd-vs-classic-metrics" class="nav-link active" data-scroll-target="#coarse-grained-rmsd-vs-classic-metrics">Coarse-grained RMSD vs classic metrics</a></li>
   <li><a href="#metrics" id="toc-metrics" class="nav-link" data-scroll-target="#metrics">Metrics</a></li>
+  <li><a href="#custom-coarse-grained-rmsd" id="toc-custom-coarse-grained-rmsd" class="nav-link" data-scroll-target="#custom-coarse-grained-rmsd">Custom coarse-grained RMSD</a>
+  <ul class="collapse">
+  <li><a href="#rmsd-computation" id="toc-rmsd-computation" class="nav-link" data-scroll-target="#rmsd-computation">RMSD computation</a></li>
+  <li><a href="#atom-selection" id="toc-atom-selection" class="nav-link" data-scroll-target="#atom-selection">Atom selection</a></li>
   </ul></li>
-  <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation">Implementation</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a>
+  <ul class="collapse">
+  <li><a href="#metrics-1" id="toc-metrics-1" class="nav-link" data-scroll-target="#metrics-1">Metrics</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -148,7 +189,7 @@ div.csl-indent {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -156,143 +197,131 @@ div.csl-indent {
   </div>
   
 
+
 </header>
 
-<section id="rna-torsional-angles" class="level2">
-<h2 class="anchored" data-anchor-id="rna-torsional-angles">RNA torsional angles</h2>
-<p>Nucleotides can be described by <strong>7 torsional angles</strong> and <strong>2 pseudo-torsional angles</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/all_angles.drawio.png" class="img-fluid figure-img" style="width:60.0%"></p>
-</figure>
-</div>
-</section>
-<section id="rna-torsional-angles-1" class="level2">
-<h2 class="anchored" data-anchor-id="rna-torsional-angles-1">RNA torsional angles</h2>
-<div class="callout-note callout callout-style-default callout-captioned">
+
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Predicting torsional and/or pseudo-torsional angles could help to resolve 3D conformational folding</li>
-<li>For each nucleotide, we could angles instead of positions</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="spot-rna-1d" class="level2">
-<h2 class="anchored" data-anchor-id="spot-rna-1d">SPOT-RNA-1D</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/spot-rna.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Network architecture of SPOT-RNA-1D (<span class="citation" data-cites="spotrna1d">Singh et al. (<a href="#ref-spotrna1d" role="doc-biblioref">2021</a>)</span>)</figcaption><p></p>
-</figure>
-</div>
-<ul>
-<li>Predict torsional and pseudo-torsional angles from the sequence</li>
-</ul>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Limits
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Results fall short of expectations</li>
-<li>Neural network architecture could be improved for sequential data</li>
-<li>Is the regression the best method ?</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="rna-torsional-angles-2" class="level2">
-<h2 class="anchored" data-anchor-id="rna-torsional-angles-2">RNA torsional angles</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/torsional_distribution.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<p></p><figcaption class="figure-caption">Torsional angles distribution on test sets of SPOT-RNA-1D</figcaption><p></p>
-</figure>
-</div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Goal
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Given groups of 2/3, the aim of the project is to predict <em>one</em> torsional/pseudo-torsional angle per nucleotide</li>
-<li>The question to be answered: <strong>Is classification better than regression for this task ?</strong></li>
-<li>Instead of doing regression, the aim would be to try a deep learning architecture for:
-<ul>
-<li>Binary classification</li>
-<li>Multiclass</li>
-</ul></li>
-<li>The deep learning architecture doesn’t have to be complex (an RNN is sufficient)</li>
-<li>You should compare the results of the classification to SPOT-RNA-1D results</li>
+<li>Given groups of 2/3, the aim of the project is to predict compute coarse-grained RMSD and to compute its correlation with three metrics: <code>RMSD</code>, <code>MCQ</code> and <code>TM-Score</code>.</li>
+<li>The question to be answered: <strong>Which coarse-grained representation has the highest correlation to current metrics?</strong></li>
+<li>You should discuss the correlation results with insights on specificities on the compared metrics.</li>
 </ul>
 </div>
 </div>
-<section id="dataset" class="level3">
-<h3 class="anchored" data-anchor-id="dataset">Dataset</h3>
-<p>The datasets are available in the skeleton code available at this <a href="https://github.com/EvryRNA/m2_geniomhe_rna_project/tree/main">link</a>.</p>
-<ul>
-<li><strong>Training set</strong>: dataset from rsRNASP (<span class="citation" data-cites="rsrnasp">Tan et al. (<a href="#ref-rsrnasp" role="doc-biblioref">2022</a>)</span>) (192 non-redundant RNAs)</li>
-<li><strong>Test set</strong>: RNA Puzzles (<span class="citation" data-cites="rna_puzzles">Cruz et al. (<a href="#ref-rna_puzzles" role="doc-biblioref">2012</a>)</span>) (29 RNAs)</li>
-</ul>
-<p>You should only consider chain A when this is a multi-stranded RNA.</p>
+<section id="coarse-grained-rmsd-vs-classic-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="coarse-grained-rmsd-vs-classic-metrics">Coarse-grained RMSD vs classic metrics</h2>
+<p>The goal of the project is to compute a custom coarse-grained RMSD and to compare its correlation with three main metrics: <code>RMSD</code>, <code>MCQ</code> and <code>TM-Score</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/website_image.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </section>
-<section id="metrics" class="level3">
-<h3 class="anchored" data-anchor-id="metrics">Metrics</h3>
-<p>The metric to compare the performances is the (Mean Absolute Error).</p>
+<section id="metrics" class="level2">
+<h2 class="anchored" data-anchor-id="metrics">Metrics</h2>
+<p>Metrics compute the quality of a predicted structure <strong>given a native one</strong>.</p>
+<p><img src="img/scoring_function.png" class="img-fluid"></p>
+<p>Your goal is to compute custom coarse-grained RMSD (with different atom per nucleotide), and then to compare the correlation to three metrics. <img src="img/scoring_function_1.png" class="img-fluid"></p>
+</section>
+<section id="custom-coarse-grained-rmsd" class="level2">
+<h2 class="anchored" data-anchor-id="custom-coarse-grained-rmsd">Custom coarse-grained RMSD</h2>
+<section id="rmsd-computation" class="level3">
+<h3 class="anchored" data-anchor-id="rmsd-computation">RMSD computation</h3>
+<p>To compute the RMSD, you have to compute the deviation per atom. But first, you need to superimpose the two structures.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/custom_rmsd.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>You would need to choose a coarse-grained representation: which atom to consider for the RMSD computation. In real RMSD computation, all the atoms are considered.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/rmsd.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</section>
+<section id="atom-selection" class="level3">
+<h3 class="anchored" data-anchor-id="atom-selection">Atom selection</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="img/cg.png" class="img-fluid"></p>
+</div><div class="column" style="width:50%;">
+<p>You would have to choose which atoms to consider for the coarse-grained RMSD computation. You can choose among:</p>
 <ul>
-<li><strong>Mean absolute Error (MAE)</strong></li>
+<li>P</li>
+<li>O5’</li>
+<li>C5’</li>
+<li>C4’</li>
+<li>C3’</li>
+<li>C2’</li>
+<li>C1’</li>
+<li>O1’</li>
+<li>O3’</li>
 </ul>
-<div class="incremental">
+<p>Or any combination between them. You can also compute full-atom RMSD to have a comparison.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>The datasets are available in this <a href="https://github.com/clementbernardd/custom_rmsd_m2_geniomhe">link</a>.</p>
+<ul>
+<li><strong>NATIVE</strong>: native <code>.pdb</code> structures from a community challenge RNA-Puzzles (<span class="citation" data-cites="rna_puzzles">Cruz et al. (<a href="#ref-rna_puzzles" role="doc-biblioref">2012</a>)</span>) (22 non-redundant RNAs)</li>
+<li><strong>PREDS</strong>: predicted <code>.pdb</code> structures from different models.</li>
+<li><strong>SCORES</strong>: metrics computed between the native structures and the predicted ones. It comprises the <code>RMSD</code>, <code>MCQ</code> and <code>TM-Score</code></li>
+</ul>
+<section id="metrics-1" class="level3">
+<h3 class="anchored" data-anchor-id="metrics-1">Metrics</h3>
+<p>To compute the quality of a predicted structure compared to the native structure, we can consider different metrics.</p>
+<p>Given a predicted structure X and a native structure Y with N <code>atoms</code>, we have</p>
+<ul>
+<li><code>RMSD</code>: root mean square deviation, computed as:</li>
+</ul>
 <p><span class="math display">\[
-MAE = \min(d_i, 360-d_i)
+RMSD(X,Y) = \sqrt{\frac{\sum_{i=1}^{N} X_i - Y_i}{N}}
 \]</span></p>
-<p>with: <span class="math display">\[
-d_i = | angle_i^{pred} - angle_i^{true} |
+<p>Note that X and Y should be aligned.</p>
+<ul>
+<li><p><code>MCQ</code> (<span class="citation" data-cites="mcq">Zok, Popenda, and Szachniuk (<a href="#ref-mcq" role="doc-biblioref">2013</a>)</span>): Mean of Circular Quantities, which gives a comparison in torsion angle space. The mathematical is complex, and so no need to have a more detail look to it.</p></li>
+<li><p><code>TM-Score</code> (<span class="citation" data-cites="tm-score">Gong, Zhang, and Zhang (<a href="#ref-tm-score" role="doc-biblioref">2019</a>)</span>,<span class="citation" data-cites="tm-score-rna">Zhang and Skolnick (<a href="#ref-tm-score-rna" role="doc-biblioref">2004</a>)</span>): Template-Modeling, aims to give a metrics that is independant of the length of the structures. It is defined as:</p></li>
+</ul>
+<p><span class="math display">\[
+TM_{score_{RNA}} = \frac{1}{L} \sum_{i=1}^{L_{ali}} \frac{1}{1+(\frac{d_i}{d_0})^2}
 \]</span></p>
-</div>
-</section>
-</section>
-<section id="implementation" class="level2">
-<h2 class="anchored" data-anchor-id="implementation">Implementation</h2>
-<p>A brief description of the workflow of the project is described in the following figure.</p>
-<p><img src="img/project_workflow_m2.drawio.png" class="img-fluid"></p>
-<!-- ::: {.callout-warning}
-For this tutorial, we are not going to install miniconda. Instead, we will use Google Colaboratory where all the installations are already done.
-[Google Colab](https://colab.research.google.com/?hl=fr)
-::: -->
+<p>with <span class="math display">\[
+d_0 = 0.6\sqrt{L-0.5} - 2.5
+\]</span></p>
+<p>being the scaling factor to ensure the score of random RNA pairs is independent of RNA length.</p>
+<p>We don’t ask you to implement these metrics, the results are given in the project. You should just keep in mind the general ideas of the metrics: <code>RMSD</code> and <code>TM-Score</code> are distance-based, and <code>MCQ</code> is based on torsional angles (and don’t consider spatial distances).</p>
 
 
 
 </section>
+</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-rna_puzzles" class="csl-entry" role="doc-biblioentry">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-rna_puzzles" class="csl-entry" role="listitem">
 Cruz, José, Marc-Frédérick Blanchet, Michal Boniecki, Janusz Bujnicki, Shi-Jie Chen, Song Cao, Rhiju Das, et al. 2012. <span>“<span class="nocase">RNA-Puzzles: A CASP-like evaluation of RNA three-dimensional structure prediction</span>.”</span> <em>RNA (New York, N.Y.)</em> 18 (February): 610–25. <a href="https://doi.org/10.1261/rna.031054.111">https://doi.org/10.1261/rna.031054.111</a>.
 </div>
-<div id="ref-spotrna1d" class="csl-entry" role="doc-biblioentry">
-Singh, Jaswinder, Kuldip Paliwal, Jaspreet Singh, and Yaoqi Zhou. 2021. <span>“<span class="nocase">RNA Backbone Torsion and Pseudotorsion Angle Prediction Using Dilated Convolutional Neural Networks</span>.”</span> <em>Journal of Chemical Information and Modeling</em> 61 (June): 2610–22. <a href="https://doi.org/10.1021/acs.jcim.1c00153">https://doi.org/10.1021/acs.jcim.1c00153</a>.
+<div id="ref-tm-score" class="csl-entry" role="listitem">
+Gong, Sha, Chengxin Zhang, and Yang Zhang. 2019. <span>“<span class="nocase">RNA-align: quick and accurate alignment of RNA 3D structures based on size-independent TM-scoreRNA</span>.”</span> <em>Bioinformatics</em> 35 (21): 4459–61. <a href="https://doi.org/10.1093/bioinformatics/btz282">https://doi.org/10.1093/bioinformatics/btz282</a>.
 </div>
-<div id="ref-rsrnasp" class="csl-entry" role="doc-biblioentry">
-Tan, Ya-Lan, Xunxun Wang, Ya-Zhou Shi, Wenbing Zhang, and Zhi-Jie Tan. 2022. <span>“<span class="nocase">rsRNASP: A residue-separation-based statistical potential for RNA 3D structure evaluation</span>.”</span> <em>Biophysical Journal</em> 121 (January): 142–56. <a href="https://doi.org/10.1016/j.bpj.2021.11.016">https://doi.org/10.1016/j.bpj.2021.11.016</a>.
+<div id="ref-tm-score-rna" class="csl-entry" role="listitem">
+Zhang, Yang, and Jeffrey Skolnick. 2004. <span>“<span class="nocase">Scoring function for automated assessment of protein structure template quality</span>.”</span> <em>Proteins</em> 57 (4): 702—710. <a href="https://doi.org/10.1002/prot.20264">https://doi.org/10.1002/prot.20264</a>.
+</div>
+<div id="ref-mcq" class="csl-entry" role="listitem">
+Zok, Tomasz, Mariusz Popenda, and Marta Szachniuk. 2013. <span>“<span class="nocase">MCQ4Structures to compute similarity of molecule structures</span>.”</span> <em>Central European Journal of Operations Research</em> 22 (April). <a href="https://doi.org/10.1007/s10100-013-0296-5">https://doi.org/10.1007/s10100-013-0296-5</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -322,12 +351,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -359,11 +391,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -373,8 +444,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -386,9 +466,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -431,9 +747,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">Copyright 2023, Clément Bernard</div>
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024, Clément Bernard</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
+
 
 
 

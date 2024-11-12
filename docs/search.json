@@ -1,73 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Project description",
-    "section": "",
-    "text": "Nucleotides can be described by 7 torsional angles and 2 pseudo-torsional angles"
-  },
-  {
-    "objectID": "index.html#rna-torsional-angles-1",
-    "href": "index.html#rna-torsional-angles-1",
-    "title": "Project description",
-    "section": "RNA torsional angles",
-    "text": "RNA torsional angles\n\n\n\n\n\n\nNote\n\n\n\n\nPredicting torsional and/or pseudo-torsional angles could help to resolve 3D conformational folding\nFor each nucleotide, we could angles instead of positions"
-  },
-  {
-    "objectID": "index.html#spot-rna-1d",
-    "href": "index.html#spot-rna-1d",
-    "title": "Project description",
-    "section": "SPOT-RNA-1D",
-    "text": "SPOT-RNA-1D\n\n\n\nNetwork architecture of SPOT-RNA-1D (Singh et al. (2021))\n\n\n\nPredict torsional and pseudo-torsional angles from the sequence\n\n\n\n\n\n\n\nLimits\n\n\n\n\nResults fall short of expectations\nNeural network architecture could be improved for sequential data\nIs the regression the best method ?"
-  },
-  {
-    "objectID": "index.html#rna-torsional-angles-2",
-    "href": "index.html#rna-torsional-angles-2",
-    "title": "Project description",
-    "section": "RNA torsional angles",
-    "text": "RNA torsional angles\n\n\n\nTorsional angles distribution on test sets of SPOT-RNA-1D\n\n\n\n\n\n\n\n\nGoal\n\n\n\n\nGiven groups of 2/3, the aim of the project is to predict one torsional/pseudo-torsional angle per nucleotide\nThe question to be answered: Is classification better than regression for this task ?\nInstead of doing regression, the aim would be to try a deep learning architecture for:\n\nBinary classification\nMulticlass\n\nThe deep learning architecture doesn’t have to be complex (an RNN is sufficient)\nYou should compare the results of the classification to SPOT-RNA-1D results\n\n\n\n\nDataset\nThe datasets are available in the skeleton code available at this link.\n\nTraining set: dataset from rsRNASP (Tan et al. (2022)) (192 non-redundant RNAs)\nTest set: RNA Puzzles (Cruz et al. (2012)) (29 RNAs)\n\nYou should only consider chain A when this is a multi-stranded RNA.\n\n\nMetrics\nThe metric to compare the performances is the (Mean Absolute Error).\n\nMean absolute Error (MAE)\n\n\n\\[\nMAE = \\min(d_i, 360-d_i)\n\\]\nwith: \\[\nd_i = | angle_i^{pred} - angle_i^{true} |\n\\]"
-  },
-  {
-    "objectID": "index.html#implementation",
-    "href": "index.html#implementation",
-    "title": "Project description",
-    "section": "Implementation",
-    "text": "Implementation\nA brief description of the workflow of the project is described in the following figure."
-  },
-  {
-    "objectID": "pages/contact.html",
-    "href": "pages/contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "If you have any question, you can send a mail at this address: clement.bernard@univ-evry.fr."
-  },
-  {
-    "objectID": "pages/contact.html#help---tutorial-pytorch",
-    "href": "pages/contact.html#help---tutorial-pytorch",
-    "title": "Contact",
-    "section": "Help - Tutorial Pytorch",
-    "text": "Help - Tutorial Pytorch\nIf you’re using Pytorch, you can have a look at this Notebook that shows an example of training for sequential data.\nIf you’re using something else than Pytorch, you can still look at the input and output shapes to help you in the development process."
-  },
-  {
-    "objectID": "pages/contact.html#help---coding-good-practices",
-    "href": "pages/contact.html#help---coding-good-practices",
-    "title": "Contact",
-    "section": "Help - coding good practices",
-    "text": "Help - coding good practices\nTo have a look at how to organize the code (in terms of folders, importations, etc), you can see this repository."
-  },
-  {
-    "objectID": "pages/contact.html#resources",
-    "href": "pages/contact.html#resources",
-    "title": "Contact",
-    "section": "Resources",
-    "text": "Resources\n\nPytorch tutorial\nBar chart using Matplotlib\nHistogram using Matplotlib"
-  },
-  {
     "objectID": "pages/guideline.html",
     "href": "pages/guideline.html",
     "title": "Project guideline",
     "section": "",
-    "text": "Deliverable\n\n\n\n\nSource code (in Github, Gitlab) (Wednesday, January, 10th. 23h59)\nPresentation of 10 min (Friday, January, 12th)\n\n\n\n\n\n\n\n\n\nMore details\n\n\n\n\nYou should send a mail before Wednesday, January, 10th at clement.bernard@univ-evry.fr with object \"M2-GENIOMHE Project - GROUP X\" (with X your group number)\nYou have to send the presentation the day before the oral (Thursday, January, 11th)"
+    "text": "Deliverable\n\n\n\n\nSource code (in Github, Gitlab) (Sunday, December, 1st. 23h59)\nPresentation of 10 min (Tuesday, December, 3rd)\n\n\n\n\n\n\n\n\n\nMore details\n\n\n\n\nYou should send a mail before Sunday, December, 1st at clement.bernard@univ-evry.fr with object \"M2-GENIOMHE Project - GROUP X\" (with X your group number)\nYou should include your Github repository as well. If you want it to be private, you can add me with my username: clementbernardd"
+  },
+  {
+    "objectID": "pages/guideline.html#task",
+    "href": "pages/guideline.html#task",
+    "title": "Project guideline",
+    "section": "",
+    "text": "Deliverable\n\n\n\n\nSource code (in Github, Gitlab) (Sunday, December, 1st. 23h59)\nPresentation of 10 min (Tuesday, December, 3rd)\n\n\n\n\n\n\n\n\n\nMore details\n\n\n\n\nYou should send a mail before Sunday, December, 1st at clement.bernard@univ-evry.fr with object \"M2-GENIOMHE Project - GROUP X\" (with X your group number)\nYou should include your Github repository as well. If you want it to be private, you can add me with my username: clementbernardd"
   },
   {
     "objectID": "pages/guideline.html#group",
@@ -81,7 +25,7 @@
     "href": "pages/guideline.html#source-code",
     "title": "Project guideline",
     "section": "Source code",
-    "text": "Source code\nThe source code should have the following requirements:\n\nHave a README to explain how is structured the codes, the installation requirements.\nHave a class that can predict the angles from a .fasta file (use the following skeleton)\n\nYou can (recommended) start your code from the following link. It provides the basic skeleton for your project, such as the training and testing data.\nYour code should include a file with this interface:\n\nclass AngleHelper:\n  def __init__(self, *args, **kwargs):\n    # TO BE COMPLETE\n    pass\n\n\n  def predict(self, in_path, out_path):\n    \"\"\"\n    Function that should predict the angles for the sequence of nucleotides\n    Args:\n      - in_path: path to a `fasta` file. \n        Example: \n          \"\n          >17EP\n          ACGUUCU\n          \"\n      - out_path: path to a `.json` file where will be stored the prediciton. \n        It should have the following keys: (example with `alpha` angle)\n          {\n            \"17EP\": {\n              \"sequence\": \"ACGUUCU\",\n              \"angles\": {\"alpha\": [0, 0, 0, 0, 0, 0, 0]}\n            } \n\n          }\n    \"\"\"\n    return None"
+    "text": "Source code\nThe source code should have the following requirements:\n\nHave a README to explain how is structured the codes, the installation requirements.\nHave a method that, given a native structure and a predicted structure, will output one of your CG-RMSD.\n\nYour code should include a file with this interface:\n\nclass CustomCGRMSD:\n  def __init__(self, *args, **kwargs):\n    # TO BE COMPLETE\n    pass\n\n\n  def predict(self, native_path: str, predicted_path: str) -&gt; float:\n    \"\"\"\n    Function that should predict CG-RMSD.\n    Args:\n      - in_path: path to a `.pdb` native file\n      - predicted_path: path to a `.pdb` predicted file\n    :return your custom CG-RMSD metric\n    \"\"\"\n    # To complete\n    return None"
   },
   {
     "objectID": "pages/guideline.html#presentation",
@@ -89,5 +33,54 @@
     "title": "Project guideline",
     "section": "Presentation",
     "text": "Presentation\nThe 10 min presentation should:\n\n\n\n\n\n\nDeliverable\n\n\n\n\nPresent briefly the project\nPresent the work done with the results\nPresent the limits of the method and the project\nDetail the group contribution"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project description",
+    "section": "",
+    "text": "Goal\n\n\n\n\nGiven groups of 2/3, the aim of the project is to predict compute coarse-grained RMSD and to compute its correlation with three metrics: RMSD, MCQ and TM-Score.\nThe question to be answered: Which coarse-grained representation has the highest correlation to current metrics?\nYou should discuss the correlation results with insights on specificities on the compared metrics."
+  },
+  {
+    "objectID": "index.html#coarse-grained-rmsd-vs-classic-metrics",
+    "href": "index.html#coarse-grained-rmsd-vs-classic-metrics",
+    "title": "Project description",
+    "section": "Coarse-grained RMSD vs classic metrics",
+    "text": "Coarse-grained RMSD vs classic metrics\nThe goal of the project is to compute a custom coarse-grained RMSD and to compare its correlation with three main metrics: RMSD, MCQ and TM-Score."
+  },
+  {
+    "objectID": "index.html#metrics",
+    "href": "index.html#metrics",
+    "title": "Project description",
+    "section": "Metrics",
+    "text": "Metrics\nMetrics compute the quality of a predicted structure given a native one.\n\nYour goal is to compute custom coarse-grained RMSD (with different atom per nucleotide), and then to compare the correlation to three metrics."
+  },
+  {
+    "objectID": "index.html#custom-coarse-grained-rmsd",
+    "href": "index.html#custom-coarse-grained-rmsd",
+    "title": "Project description",
+    "section": "Custom coarse-grained RMSD",
+    "text": "Custom coarse-grained RMSD\n\nRMSD computation\nTo compute the RMSD, you have to compute the deviation per atom. But first, you need to superimpose the two structures.\n\n\n\n\n\nYou would need to choose a coarse-grained representation: which atom to consider for the RMSD computation. In real RMSD computation, all the atoms are considered.\n\n\n\n\n\n\n\nAtom selection\n\n\n\n\nYou would have to choose which atoms to consider for the coarse-grained RMSD computation. You can choose among:\n\nP\nO5’\nC5’\nC4’\nC3’\nC2’\nC1’\nO1’\nO3’\n\nOr any combination between them. You can also compute full-atom RMSD to have a comparison."
+  },
+  {
+    "objectID": "index.html#dataset",
+    "href": "index.html#dataset",
+    "title": "Project description",
+    "section": "Dataset",
+    "text": "Dataset\nThe datasets are available in this link.\n\nNATIVE: native .pdb structures from a community challenge RNA-Puzzles (Cruz et al. (2012)) (22 non-redundant RNAs)\nPREDS: predicted .pdb structures from different models.\nSCORES: metrics computed between the native structures and the predicted ones. It comprises the RMSD, MCQ and TM-Score\n\n\nMetrics\nTo compute the quality of a predicted structure compared to the native structure, we can consider different metrics.\nGiven a predicted structure X and a native structure Y with N atoms, we have\n\nRMSD: root mean square deviation, computed as:\n\n\\[\nRMSD(X,Y) = \\sqrt{\\frac{\\sum_{i=1}^{N} X_i - Y_i}{N}}\n\\]\nNote that X and Y should be aligned.\n\nMCQ (Zok, Popenda, and Szachniuk (2013)): Mean of Circular Quantities, which gives a comparison in torsion angle space. The mathematical is complex, and so no need to have a more detail look to it.\nTM-Score (Gong, Zhang, and Zhang (2019),Zhang and Skolnick (2004)): Template-Modeling, aims to give a metrics that is independant of the length of the structures. It is defined as:\n\n\\[\nTM_{score_{RNA}} = \\frac{1}{L} \\sum_{i=1}^{L_{ali}} \\frac{1}{1+(\\frac{d_i}{d_0})^2}\n\\]\nwith \\[\nd_0 = 0.6\\sqrt{L-0.5} - 2.5\n\\]\nbeing the scaling factor to ensure the score of random RNA pairs is independent of RNA length.\nWe don’t ask you to implement these metrics, the results are given in the project. You should just keep in mind the general ideas of the metrics: RMSD and TM-Score are distance-based, and MCQ is based on torsional angles (and don’t consider spatial distances)."
+  },
+  {
+    "objectID": "pages/contact.html",
+    "href": "pages/contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "If you have any question, you can send a mail at this address: clement.bernard@univ-evry.fr."
+  },
+  {
+    "objectID": "pages/contact.html#questions",
+    "href": "pages/contact.html#questions",
+    "title": "Contact",
+    "section": "",
+    "text": "If you have any question, you can send a mail at this address: clement.bernard@univ-evry.fr."
   }
 ]

@@ -2,82 +2,111 @@
 title: "Project description"
 bibliography: references.bib
 ---
-
-## RNA torsional angles
-
-Nucleotides can be described by **7 torsional angles** and **2 pseudo-torsional angles**
-
-![](img/all_angles.drawio.png){fig-align="center" width=60%}
-
-
-## RNA torsional angles
-
-:::{.callout-note}
-- Predicting torsional and/or pseudo-torsional angles could help to resolve 3D conformational folding
-- For each nucleotide, we could angles instead of positions
-:::
-
-## SPOT-RNA-1D
-
-![Network architecture of SPOT-RNA-1D (@spotrna1d)](img/spot-rna.png)
-
-- Predict torsional and pseudo-torsional angles from the sequence
-
-
-:::{.callout-warning}
-### Limits
-- Results fall short of expectations
-- Neural network architecture could be improved for sequential data
-- Is the regression the best method ? 
-:::
-
-## RNA torsional angles
-
-![Torsional angles distribution on test sets of SPOT-RNA-1D](img/torsional_distribution.png){fig-align="center" width=60%}
-
 :::{.callout-tip}
 ### Goal
-- Given groups of 2/3, the aim of the project is to predict *one* torsional/pseudo-torsional angle per nucleotide
-- The question to be answered: **Is classification better than regression for this task ?**
-- Instead of doing regression, the aim would be to try a deep learning architecture for:
-    - Binary classification
-    - Multiclass
-- The deep learning architecture doesn't have to be complex (an RNN is sufficient)
-- You should compare the results of the classification to SPOT-RNA-1D results
+- Given groups of 2/3, the aim of the project is to predict compute coarse-grained RMSD and to compute its correlation with three metrics: `RMSD`, `MCQ` and `TM-Score`.
+- The question to be answered: **Which coarse-grained representation has the highest correlation to current metrics?**
+- You should discuss the correlation results with insights on specificities on the compared metrics. 
 :::
 
-### Dataset
+## Coarse-grained RMSD vs classic metrics
 
-The datasets are available in the skeleton code available at this [link](https://github.com/EvryRNA/m2_geniomhe_rna_project/tree/main). 
+The goal of the project is to compute a custom coarse-grained RMSD and to compare its correlation with three main metrics: `RMSD`, `MCQ` and `TM-Score`. 
 
-- **Training set**: dataset from rsRNASP (@rsrnasp) (192 non-redundant RNAs)
-- **Test set**: RNA Puzzles (@rna_puzzles) (29 RNAs)
+![](img/website_image.png){fig-align="center" width=100%}
 
-You should only consider chain A when this is a multi-stranded RNA.
+
+## Metrics
+
+Metrics compute the quality of a predicted structure **given a native one**.
+
+![](img/scoring_function.png)
+
+Your goal is to compute custom coarse-grained RMSD (with different atom per nucleotide), and then to compare the correlation to three metrics. 
+![](img/scoring_function_1.png)
+
+
+## Custom coarse-grained RMSD
+
+### RMSD computation
+To compute the RMSD, you have to compute the deviation per atom. But first, you need to superimpose the two structures. 
+
+![](img/custom_rmsd.png){fig-align="center" width=100%}
+
+
+You would need to choose a coarse-grained representation: which atom to consider for the RMSD computation. In real RMSD computation, all the atoms are considered. 
+
+
+![](img/rmsd.png){fig-align="center" width=100%}
+
+### Atom selection 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](img/cg.png)
+:::
+
+::: {.column width="50%"}
+You would have to choose which atoms to consider for the coarse-grained RMSD computation.
+You can choose among: 
+
+- P
+- O5'
+- C5'
+- C4'
+- C3'
+- C2'
+- C1'
+- O1'
+- O3'
+
+Or any combination between them. 
+You can also compute full-atom RMSD to have a comparison. 
+:::
+
+::::
+
+
+
+## Dataset
+
+The datasets are available in this [link](https://github.com/clementbernardd/custom_rmsd_m2_geniomhe). 
+
+- **NATIVE**: native `.pdb` structures from a community challenge RNA-Puzzles (@rna_puzzles) (22 non-redundant RNAs)
+- **PREDS**: predicted `.pdb` structures from different models.
+- **SCORES**: metrics computed between the native structures and the predicted ones. It comprises the `RMSD`, `MCQ` and `TM-Score`
+
+
 
 ### Metrics 
-The metric to compare the performances is the (Mean Absolute Error). 
 
-- **Mean absolute Error (MAE)** 
+To compute the quality of a predicted structure compared to the native structure, we can consider different metrics.
 
-. . . 
+Given a predicted structure X and a native structure Y with N `atoms`, we have
+
+- `RMSD`: root mean square deviation, computed as:
 
 $$
-MAE = \min(d_i, 360-d_i)
+RMSD(X,Y) = \sqrt{\frac{\sum_{i=1}^{N} X_i - Y_i}{N}}
 $$
 
-with:
+Note that X and Y should be aligned. 
+
+- `MCQ` (@mcq): Mean of Circular Quantities, which gives a comparison in torsion angle space. The mathematical is complex, and so no need to have a more detail look to it.
+
+- `TM-Score` (@tm-score,@tm-score-rna): Template-Modeling, aims to give a metrics that is independant of the length of the structures. It is defined as:
+
 $$
-d_i = | angle_i^{pred} - angle_i^{true} | 
+TM_{score_{RNA}} = \frac{1}{L} \sum_{i=1}^{L_{ali}} \frac{1}{1+(\frac{d_i}{d_0})^2}
 $$
 
-## Implementation 
+with 
+$$
+d_0 = 0.6\sqrt{L-0.5} - 2.5
+$$
+ 
+being the scaling factor to ensure the score of random RNA pairs is independent of RNA length. 
 
-A brief description of the workflow of the project is described in the following figure.
 
-![](img/project_workflow_m2.drawio.png)
-
-<!-- ::: {.callout-warning}
-For this tutorial, we are not going to install miniconda. Instead, we will use Google Colaboratory where all the installations are already done.
-[Google Colab](https://colab.research.google.com/?hl=fr)
-::: -->
+We don't ask you to implement these metrics, the results are given in the project. You should just keep in mind the general ideas of the metrics: `RMSD` and `TM-Score` are distance-based, and `MCQ` is based on torsional angles (and don't consider spatial distances).

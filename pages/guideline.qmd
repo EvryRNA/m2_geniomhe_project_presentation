@@ -6,59 +6,46 @@ title: "Project guideline"
 
 :::{.callout-note}
 ### Deliverable
-- Source code (in Github, Gitlab) (**Wednesday, January, 10th. 23h59**)
-- Presentation of 10 min (**Friday, January, 12th**)
+- Source code (in Github, Gitlab) (**Sunday, December, 1st. 23h59**)
+- Presentation of 10 min (**Tuesday, December, 3rd**)
 :::
 
 :::{.callout-important}
 ### More details
-- You should send a mail before **Wednesday, January, 10th** at `clement.bernard@univ-evry.fr` with object `"M2-GENIOMHE Project - GROUP X"` (with X your group number)
-- You have to send the presentation the day before the oral (**Thursday, January, 11th**) 
+- You should send a mail before **Sunday, December, 1st** at `clement.bernard@univ-evry.fr` with object `"M2-GENIOMHE Project - GROUP X"` (with X your group number)
+- You should include your Github repository as well. If you want it to be private, you can add me with my username: `clementbernardd`
 :::
 
 ## Group
 
-Please create your group and complete the following [document](https://docs.google.com/spreadsheets/d/1XEne6tfJT_OS5oCT8iaOHTTYfovKcJ3uM6sCt4izyO8/edit?usp=sharing). 
+Please create your group and complete the following [document](https://docs.google.com/spreadsheets/d/1l6drO62cX62KW-_4MRwvXW-8GXejj0SMUUjQoDxZ-3g/edit?usp=sharing). 
 
 ## Source code
 
 The source code should have the following requirements:
 
 - Have a `README` to explain how is structured the codes, the installation requirements.
-- Have a class that can predict the angles from a `.fasta` file (use the following skeleton) 
+- Have a method that, given a native structure and a predicted structure, will output one of your CG-RMSD.
 
-You can (recommended) start your code from the following [link](https://github.com/EvryRNA/m2_geniomhe_rna_project/tree/main). 
-It provides the basic skeleton for your project, such as the training and testing data. 
 
 Your code should include a file with this interface: 
 ```{python}
 
-class AngleHelper:
+class CustomCGRMSD:
   def __init__(self, *args, **kwargs):
     # TO BE COMPLETE
     pass
 
 
-  def predict(self, in_path, out_path):
+  def predict(self, native_path: str, predicted_path: str) -> float:
     """
-    Function that should predict the angles for the sequence of nucleotides
+    Function that should predict CG-RMSD.
     Args:
-      - in_path: path to a `fasta` file. 
-        Example: 
-          "
-          >17EP
-          ACGUUCU
-          "
-      - out_path: path to a `.json` file where will be stored the prediciton. 
-        It should have the following keys: (example with `alpha` angle)
-          {
-            "17EP": {
-              "sequence": "ACGUUCU",
-              "angles": {"alpha": [0, 0, 0, 0, 0, 0, 0]}
-            } 
-
-          }
+      - in_path: path to a `.pdb` native file
+      - predicted_path: path to a `.pdb` predicted file
+    :return your custom CG-RMSD metric
     """
+    # To complete
     return None
 ```
 
