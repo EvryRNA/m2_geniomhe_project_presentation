@@ -100,7 +100,7 @@ Given a predicted structure X and a native structure Y with N `atoms`, we have
 - `RMSD`: root mean square deviation, computed as:
 
 $$
-RMSD(X,Y) = \sqrt{\frac{\sum_{i=1}^{N} X_i - Y_i}{N}}
+RMSD(X,Y) = \sqrt{\frac{\sum_{i=1}^{N} (X_i - Y_i)^2}{N}}
 $$
 
 Note that X and Y should be aligned. 
